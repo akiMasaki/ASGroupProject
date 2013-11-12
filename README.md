@@ -20,7 +20,6 @@ Some points to consider :
 4. This is going to get very big very quickly, so please add concise commenting to all the work to allow 
 other people to understand your modules.
 
-5. Add other things that you see appropriate to this and amend everything that's necessary.
 -----
 
 
