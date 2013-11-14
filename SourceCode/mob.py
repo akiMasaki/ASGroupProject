@@ -30,7 +30,6 @@ class Mob():
     self.damageToBase= newDamageToBase
   def getDamageToBase():
     return self.DamageToBase
-    
-TestMob=Mob()
+
 
 
