@@ -35,7 +35,7 @@ class GameStats():
     def CurrentTime():
         CurrentTime=(time.time())
         return CurrentTime
-
+#ALL BELOW NEED TO BE IN A DEBUGGING FUNCTION IN FUTURE
 
 GameStats = GameStats()
 
