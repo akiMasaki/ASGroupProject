@@ -31,7 +31,10 @@ class GameStats():
     
     def setHealth(self, newHealth):
         self.health = newHealth
-
+        
+    def CurrentTime():
+        CurrentTime=(time.time())
+        return CurrentTime
 
 
 GameStats = GameStats()
