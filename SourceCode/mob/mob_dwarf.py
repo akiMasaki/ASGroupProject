@@ -1,5 +1,5 @@
-import Mob
-class Mob_Dwarf(Mob):
+import mob
+class Mob_Dwarf(mob):
   def __init__(self):
     self.damage       = 1
     self.speed        = 1
