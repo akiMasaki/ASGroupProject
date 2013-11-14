@@ -6,5 +6,3 @@ class Mob_Runner(mob.Mob):
     self.health       = 1
     self.damageToBase = 1
   
-dwarf1 = Mob_Runner()
-print(dwarf1.getHealth())
