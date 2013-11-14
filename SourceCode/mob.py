@@ -1,4 +1,5 @@
 class Mob:
+  #INTITALIZATION
   def __init__():
     self.damage = 0
     self.speed = 0
@@ -8,7 +9,7 @@ class Mob:
   
   
   
-  
+  #GET AND SET METHORDS
   
   def setDamage(self , newDamage):
     self.health=newDamage
