@@ -1,10 +1,12 @@
-
+import time
 class GameStats():
     # Function that is run initialy setting an mount of lives and cash
     def __init__(self):
         self.health = 5
         self.cash = 100
         self.gameMode = 1
+        self.currentTime = 0
+        self.startTime = time.time()
 
     def gameMode(self):
         while True:
@@ -32,9 +34,9 @@ class GameStats():
     def setHealth(self, newHealth):
         self.health = newHealth
         
-    def CurrentTime():
-        CurrentTime=(time.time())
-        return CurrentTime
+    def currentTime():
+        self.currentTime=time.time()-self.startTime
+        return currentTime
 
 
 GameStats = GameStats()
