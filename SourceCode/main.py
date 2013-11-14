@@ -5,7 +5,6 @@ sys.path.append('/tower/')
 sys.path.append('/game stats/')
 sys.path.append('/map/')
 from mob import *
-from mob_dwarf import Mob_Dwarf
 from gameStats import gameStats
 #from tower import towers
 
