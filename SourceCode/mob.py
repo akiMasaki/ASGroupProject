@@ -10,18 +10,18 @@ class Mob:
   
   
   
-  def setDamage():
-    return self.damage
+  def setDamage(self , newDamage):
+    self.health=newDamage
   def getDamage():
     return self.damage
     
-    def setSpeed():
-    return self.speed
+    def setSpeed(self, newSpeed):
+    self.speed
   def getSpeed():
     return self.speed
     
-    def setHealth():
-    return self.health
+    def setHealth(self, newHealth):
+    self.health = newHealth
   def getHealth():
     return self.health
     
