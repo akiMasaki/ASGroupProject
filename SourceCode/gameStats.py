@@ -1,9 +1,8 @@
 
-
-class gameStats():
+class GameStats():
     # Function that is run initialy setting an mount of lives and cash
     def __init__(self):
-        self.lives = 5
+        self.health = 5
         self.cash = 100
         self.gameMode = 1
 
@@ -14,10 +13,10 @@ class gameStats():
                 print("Gamemode must be set to 1 or 2")
                 continue
             if self.gameMode == 1:
-                self.setLives(5)
+                self.setHealth(5)
                 self.setCash(100)
             else:
-                self.setLives(100)
+                self.setHealth(100)
                 self.setCash(300000)
             return self.gameMode
             
@@ -27,11 +26,11 @@ class gameStats():
     def setCash(self, newCash):
         self.cash = newCash
         
-    def getLives(self):
-        return self.lives
+    def getHealth(self):
+        return self.health
     
-    def setLives(self, newLives):
-        self.lives = newLives
+    def setHealth(self, newHealth):
+        self.health = newHealth
 
 
 
@@ -39,10 +38,10 @@ gameStats = gameStats()
 
 print(gameStats.getCash())
 
-gameStats.setCash(300000)
-print(gameStats.getCash())
+GameStats.setCash(300000)
+print(GameStats.getCash())
 
-print(gameStats.getLives())
+print(GameStats.getLives())
 
-gameStats.setLives(100)
-print(gameStats.getLives())
+GameStats.setLives(100)
+print(GameStats.getLives())
