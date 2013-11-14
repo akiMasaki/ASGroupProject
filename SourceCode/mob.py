@@ -1,4 +1,4 @@
-class Mob():
+class Mob:
   def __init__():
     self.damage = 0
     self.speed = 0
