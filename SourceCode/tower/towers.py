@@ -1,4 +1,4 @@
-class towers():
+class Towers():
     def _init_(self):
         self.damage = 5
         self.range = 10
