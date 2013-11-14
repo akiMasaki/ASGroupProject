@@ -9,7 +9,7 @@ class GameStats():
         self.startTime = time.time()
         self.currentTime=0
         self.error = ''
-        self.update()
+        self.update
 
     def setGameMode(self, mode):
         if mode!=2 or mode!=1:
@@ -45,6 +45,7 @@ class GameStats():
     
     def update(self):
         self.currentTime=time.time() - self.startTime
+        
 
     
 #ALL BELOW NEED TO BE IN A DEBUGGING FUNCTION IN FUTURE
