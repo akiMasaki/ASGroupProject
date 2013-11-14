@@ -13,22 +13,22 @@ class Mob():
   
   def setDamage(self , newDamage):
     self.health=newDamage
-  def getDamage():
+  def getDamage(self):
     return self.damage
     
     def setSpeed(self, newSpeed):
     self.speed= newSpeed
-  def getSpeed():
+  def getSpeed(self):
     return self.speed
     
     def setHealth(self, newHealth):
     self.health = newHealth
-  def getHealth():
+  def getHealth(self):
     return self.health
     
     def setDamageToBase(self, newDamageToBase):
     self.damageToBase= newDamageToBase
-  def getDamageToBase():
+  def getDamageToBase(self):
     return self.DamageToBase
 
 
