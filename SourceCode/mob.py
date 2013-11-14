@@ -1,4 +1,4 @@
-class Mob:
+class Mob():
   #INTITALIZATION
   def __init__():
     self.damage = 0
@@ -30,3 +30,7 @@ class Mob:
     self.damageToBase= newDamageToBase
   def getDamageToBase():
     return self.DamageToBase
+    
+TestMob=Mob()
+
+
