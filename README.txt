@@ -21,7 +21,18 @@ Some points to consider :
 other people to understand your modules.
 
 -----
+Project:
+
+GameStats -- Sam
+Map -- Jager & Nick
+Towers -- Aki & Adrian
+Mobs -- Mark & Harry
+
+-----
+Standards :
 
 
+
+-----
 
 Any Specific information on your modules can go here.
