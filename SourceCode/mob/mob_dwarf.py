@@ -6,5 +6,4 @@ class Mob_Dwarf(mob.Mob):
     self.health       = 1
     self.damageToBase = 1
   
-dwarf1 = Mob_Dwarf()
-print(dwarf1.getHealth())
+

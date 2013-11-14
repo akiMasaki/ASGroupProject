@@ -10,6 +10,6 @@ class Towers():
     def towerCost(self, newCost):
         self.cost = newCost
 
-    tower = towers()
+tower = Towers()
 
-    print(tower.towerDamage())
+print(tower.towerDamage())

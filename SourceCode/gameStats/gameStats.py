@@ -43,7 +43,7 @@ class GameStats():
     def getTime(self):
         return self.currentTime
     
-    def update():
+    def update(self):
         self.currentTime=time.time() - self.startTime
 
     
