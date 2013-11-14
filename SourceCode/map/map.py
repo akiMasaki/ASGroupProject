@@ -16,11 +16,6 @@ class Map () :
 
 
 
-Test1=Map()
-Test1.setMap()
-print(Test1.map)
-
-
 
 
 
