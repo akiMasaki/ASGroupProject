@@ -7,8 +7,6 @@ class Mob():
     self.damageToBase = 0
   
   
-  
-  
   #GET AND SET METHORDS
   
   def setDamage(self , newDamage):

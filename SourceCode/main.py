@@ -5,5 +5,12 @@ sys.path.append('/tower/')
 sys.path.append('/game stats/')
 sys.path.append('/map/')
 from mob import mob_dwarf
-from 'game stats' import gameStats
-from 'towers' import towers
+from gameStats import gameStats
+from towers import towers
+
+stats = gameStats.GameStats()
+print(stats.getError())
+if stats.setGameMode(3):
+    pass
+print(stats.getError())
+
