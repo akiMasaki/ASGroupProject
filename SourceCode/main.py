@@ -6,3 +6,4 @@ sys.path.append('/game stats/')
 sys.path.append('/map/')
 from mob import Mob
 from 'game stats' import GameStats
+from 'towers' import towers
