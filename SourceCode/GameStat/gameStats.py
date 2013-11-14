@@ -34,14 +34,14 @@ class GameStats():
 
 
 
-gameStats = gameStats()
+GameStats = GameStats()
 
-print(gameStats.getCash())
+print(GameStats.getCash())
 
 GameStats.setCash(300000)
 print(GameStats.getCash())
 
-print(GameStats.getLives())
+print(GameStats.getHealth())
 
-GameStats.setLives(100)
-print(GameStats.getLives())
+GameStats.setHealth(100)
+print(GameStats.getHealth())
