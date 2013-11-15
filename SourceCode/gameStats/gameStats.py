@@ -7,7 +7,6 @@ class GameStats():
         self.gameMode = 1
         self.currentTime = 0
         self.startTime = time.time()
-        self.currentTime=0
         self.error = ''
         self.update()
 
@@ -48,19 +47,3 @@ class GameStats():
     def update(self):
         self.currentTime=time.time() - self.startTime
         
-
-    
-#ALL BELOW NEED TO BE IN A DEBUGGING FUNCTION IN FUTURE
-
-
-GameStats = GameStats()
-
-print(GameStats.getCash())
-
-GameStats.setCash(300000)
-print(GameStats.getCash())
-
-print(GameStats.getHealth())
-
-GameStats.setHealth(100)
-print(GameStats.getHealth())
