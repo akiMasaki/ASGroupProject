@@ -9,21 +9,23 @@ class GameStats():
         self.startTime = time.time()
         self.currentTime=0
         self.error = ''
-        self.update
+        self.update()
 
     def setGameMode(self, mode):
         if mode!=2 or mode!=1:
             self.error = "Gamemode must be set to 1 or 2"
-            return 0
+            return True
         if mode == 1:
             self.gameMode = 1
             self.setHealth(5)
             self.setCash(100)
+            self.error = ''
         else:
             self.gameMode = 2
             self.setHealth(100)
             self.setCash(300000)
-        return 1
+            self.error = ''
+        return False
     def getGameMode(self):
         return self.gameMode
     
