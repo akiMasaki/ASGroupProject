@@ -8,6 +8,8 @@ class GameStats():
         self.currentTime = 0
         self.startTime = time.time()
         self.error = ''
+        self.mobRKill #Variables need to be looked at by mob team
+        self.mobDKill
         self.update()
 
     def setGameMode(self, mode):
@@ -46,4 +48,18 @@ class GameStats():
     
     def update(self):
         self.currentTime=time.time() - self.startTime
+    
+    # Adds cash when mobs killed
+    def cashDrop(self, cashDrop):
+        if self.mobDKill==True:
+            cashDrop = 30
+            self.cash = self.cash + cashDrop
+            self.mobDKill=False
+        if slef.mobRKill==True:
+            cashDrop = 25
+            self.cash = self.cash + cashDrop
+            self.mobRKill=False
+
+
+
         
