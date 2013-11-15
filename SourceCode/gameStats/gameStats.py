@@ -55,7 +55,7 @@ class GameStats():
             cashDrop = 30
             self.cash = self.cash + cashDrop
             self.mobDKill=False
-        if slef.mobRKill==True:
+        if self.mobRKill==True:
             cashDrop = 25
             self.cash = self.cash + cashDrop
             self.mobRKill=False
