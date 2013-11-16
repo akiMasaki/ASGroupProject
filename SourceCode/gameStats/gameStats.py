@@ -51,11 +51,11 @@ class GameStats():
     
     def kill(self):
         if (self.mobDKillC==self.mobDKill + 1):
-            cashDrop(25)
+            self.cashDrop(25)
             self.mobDKillC=self.mobDKill
         if (self.mobRKillC==self.mobRKill + 1):
-            cashDrop(30)
+            self.cashDrop(30)
             self.mobRKillC=self.mobRKill
 
-    def cashDrop(cashToAdd):
-        cash = cash + cashToAdd
+    def cashDrop(self, cashToAdd):
+        self.cash = self.cash + cashToAdd
