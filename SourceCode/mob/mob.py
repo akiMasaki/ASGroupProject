@@ -10,7 +10,7 @@ class Mob():
   #GET AND SET METHORDS
   
   def setDamage(self , newDamage):
-    self.health=newDamage
+    self.damage=newDamage
   def getDamage(self):
     return self.damage
     
