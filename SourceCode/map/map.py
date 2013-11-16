@@ -17,14 +17,12 @@ class Map () :
     def updateMap (self,Cordintes,ChangeValue):
         #cordinates get changed to location in array
         split=list(str(Cordintes))
-        verticalCordinate=ord(split[0])-64
-        horizontalCoridinate=int(split[1])
+        verticalCordinate=ord(split[0])-65
+        horizontalCoridinate=int(split[1])-1
         #Updating the map instance to the new value
         mapUpdateP1=self.currentMap
-        mapUpdateP2=mapUpdateP1[VerticalCordinate]
-        MapupdateP2[horizontalCordiante]=ChangeValue
-        
-        
+        mapUpdateP2=mapUpdateP1[verticalCordinate]
+        mapUpdateP2[horizontalCoridinate]=ChangeValue
 
 
 
