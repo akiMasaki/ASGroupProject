@@ -49,17 +49,13 @@ class GameStats():
     def update(self):
         self.currentTime=time.time() - self.startTime
     
-    # Adds cash when mobs killed
-    def cashDrop(self, cashDrop):
-        if self.mobDKill==True:
-            cashDrop = 30
-            self.cash = self.cash + cashDrop
-            self.mobDKill=False
-        if self.mobRKill==True:
-            cashDrop = 25
-            self.cash = self.cash + cashDrop
-            self.mobRKill=False
+    def kill(self):
+        if (self.mobDKillC==self.mobDKill + 1):
+            cashDrop(25)
+            self.mobDKillC=self.mobDKill
+        if (self.mobRKillC==self.mobRKill + 1):
+            cashDrop(30)
+            self.mobRKillC=self.mobRKill
 
-
-
-        
+    def cashDrop(cashToAdd):
+        cash = cash + cashToAdd
