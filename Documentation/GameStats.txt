@@ -1,0 +1,5 @@
+Cash
+Health
+Time
+Gamemodes(2 settings)
+Cash dropped from mobs
