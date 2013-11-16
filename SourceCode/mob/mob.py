@@ -1,19 +1,11 @@
 class Mob():
-  #INTITALIZATION
   def __init__():
-    self.damage = 0
     self.speed = 0
     self.health = 0
     self.damageToBase = 0
   
   
   #GET AND SET METHORDS
-  
-  def setDamage(self , newDamage):
-    self.damage=newDamage
-  def getDamage(self):
-    return self.damage
-    
   def setSpeed(self, newSpeed):
     self.speed= newSpeed
   def getSpeed(self):
@@ -29,5 +21,16 @@ class Mob():
   def getDamageToBase(self):
     return self.DamageToBase
 
+#DERRIVED CLASSES
+class Mob_Dwarf(Mob):
+  def __init__(self):
+    self.speed        = 1
+    self.health       = 1
+    self.damageToBase = 1
 
-
+class Mob_Runner(Mob):
+  def __init__(self):
+    self.speed        = 2
+    self.health       = 1
+    self.damageToBase = 1
+  

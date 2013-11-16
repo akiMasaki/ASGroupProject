@@ -8,12 +8,18 @@ class GameStats():
         self.currentTime = 0
         self.startTime = time.time()
         self.error = ''
-        self.mobRKill #Variables need to be looked at by mob team
-        self.mobDKill
+        self.mobDwarfKills = 0
+        # killCash is a dictionary so self.killCash('Dwarf') returns 1
+        self.killCash = {'Dwarf': 1, 'Runner' : 2}
         self.update()
 
     def setGameMode(self, mode):
-        if mode!=2 or mode!=1:
+        try:
+            mode = int(mode)
+        except ValueError:
+            self.error='Not a valid Number'
+            return True
+        if mode!=2 and mode!=1:
             self.error = "Gamemode must be set to 1 or 2"
             return True
         if mode == 1:
@@ -46,16 +52,21 @@ class GameStats():
     def getTime(self):
         return self.currentTime
     
+    def getMobDwarfKills(self):
+        return self.mobDwarfKills
+    
     def update(self):
         self.currentTime=time.time() - self.startTime
     
-    def kill(self):
-        if (self.mobDKillC==self.mobDKill + 1):
-            self.cashDrop(25)
-            self.mobDKillC=self.mobDKill
-        if (self.mobRKillC==self.mobRKill + 1):
-            self.cashDrop(30)
-            self.mobRKillC=self.mobRKill
+    def mobKilled(self, mobType):
+            self.cashDrop(self.killCash[mobType])
+            if mobType == 'Dwarf':
+                self.mobDwarfKills = self.mobDwarfKills + 1
 
     def cashDrop(self, cashToAdd):
         self.cash = self.cash + cashToAdd
+"""
+    fuction to output mob kills into a file to read in next round
+    and add variable to hold toatal mob kills so at end of round:
+    number in the file for dwarfs = number in the file for dwarfs + mobDwarfKills
+"""
