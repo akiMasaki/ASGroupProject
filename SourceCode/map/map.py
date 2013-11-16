@@ -11,14 +11,14 @@ class Map () :
             for n in range(0,5):
                 c.append(0)
         self.currentMap=newMap
-    def returnMap (self):
+    def getMap (self):
         return self.currentMap
         
-    def updateMap (self,Cordintes,ChangeValue):
+    def updateMap (self,coordinates,changeValue):
         #cordinates get changed to location in array
-        split=list(str(Cordintes))
-        verticalCordinate=ord(split[0])-65
-        horizontalCoridinate=int(split[1])-1
+        split=list(str(coordinates))
+        verticalCoordinate=ord(split[0])-65
+        horizontalCoordinate=int(split[1])-1
         #Updating the map instance to the new value
         mapUpdateP1=self.currentMap
         mapUpdateP2=mapUpdateP1[verticalCordinate]
