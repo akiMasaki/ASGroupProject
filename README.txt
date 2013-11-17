@@ -25,9 +25,8 @@ Project:
 
 Main -- Mark
 GameStats -- Sam
-Map -- Jager & Nick
 Towers -- Aki & Adrian
-Mobs -- Mark
+Mobs -- Jager & Nick
 
 -----
 Standards :
