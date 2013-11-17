@@ -16,18 +16,22 @@ def playTitle():
     screen.blit(title2, (50,100))
     pygame.display.flip()
 
-
+def playLevel1():
+    screen.blit(titleImage, titleImage_position)
+    background = pygame.Surface(screen.get_size())
+    background.fill((140,206,250))
+    screen.blit(background, (0,0))
+    pygame.display.flip()
     
+levelSelect = {'Title':playTitle, 'Level1':playLevel1}
+
 gameStats = gameStats.GameStats()
 gameStats.setLevel('Title')
 
 pygame.init()
 screen = pygame.display.set_mode((720,670))
 
-#background = pygame.Surface(screen.get_size())
-#background.fill((140,206,250))
-
-titleImage = pygame.image.load( "images/title_image.jpg" )
+titleImage = pygame.image.load('images/title_image.jpg')
 titleImage_position = titleImage.get_rect()
 
 defaultFont = pygame.font.Font('fonts/miriamfixed.ttf', 48 )
@@ -40,9 +44,8 @@ while gameStats.getLevel()!=None:
     keyinput = pygame.key.get_pressed()
     if keyinput[pygame.K_ESCAPE] or pygame.event.peek(pygame.QUIT):
         break
-    
-    if gameStats.getLevel() == 'Title':
-        playTitle()
+
+    levelSelect[gameStats.getLevel()]()
 
 
 
