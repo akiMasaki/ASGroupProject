@@ -1,9 +1,9 @@
-class Towers():
+class Tower():
     def _init_(self):
         self.damage = 0
         self.range = 0
-        self.cost = 0
-        
+
+#GET AND SET METHODS   
     def setDamage(self, nDamage):
         self.damage = nDamage
     def getDamage(self):
@@ -13,9 +13,8 @@ class Towers():
         self.range = nRange
     def getRange(self):
         return self.range
-    
-    def setCost(self, nCost):
-        self.cost = nCost
-    def getCost(self):
-        return self.cost
 
+class BasicTower(Tower):
+    def _init_(self):
+        self.damage = 1
+        self.range = 20
