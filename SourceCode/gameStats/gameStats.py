@@ -61,7 +61,6 @@ class GameStats():
     def mobKilled(self, mobType):
             self.cashDrop(self.killCash[mobType])
             if mobType == 'Dwarf':
-                cashDrop(30)
                 self.mobDwarfKills = self.mobDwarfKills + 1
 
     def cashDrop(self, cashToAdd):
