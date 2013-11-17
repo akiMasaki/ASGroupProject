@@ -69,16 +69,17 @@ class GameStats():
 
     def cashDrop(self, cashToAdd):
         self.cash = self.cash + cashToAdd
-"""
-    fuction to output mob kills into a file to read in next round
-    and add variable to hold toatal mob kills so at end of round:
-    number in the file for dwarfs = number in the file for dwarfs + mobDwarfKills
-"""
-        
+    
     def towerBought(self, towerType):
         self.cashSpent(self.towerCost[towerType])
 
     def cashSpent(self, cashToDeduct):
         self.cash = self.cash - cashToDeduct
         
-        
+
+"""
+    fuction to output mob kills into a file to read in next round
+    and add variable to hold toatal mob kills so at end of round:
+    number in the file for dwarfs = number in the file for dwarfs + mobDwarfKills
+"""
+         

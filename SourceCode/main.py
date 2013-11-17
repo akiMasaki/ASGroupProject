@@ -12,12 +12,11 @@ def main():
 # SETTING UP THE GAME AREA
     pygame.init()	
     screen = pygame.display.set_mode((720,670))
-    
     background = pygame.Surface(screen.get_size())
     background.fill((142,206,250))
     
-    titleImage = pygame.image.load( "images/title.jpeg" )
-    titleImage_position = image.get_rect()
+    titleImage = pygame.image.load( "images/title.jpg" )
+    titleImage_position = titleImage.get_rect()
     titleImage_position.bottom = 240
     titleImage_position.left = 200
     
@@ -25,8 +24,8 @@ def main():
     title = defaultFont.render('CLFS Tower Defence Game', 0, (0,0,0))
 
     screen.blit(background,(0,0))
-    screen.blit(image, titleImage_position)
-    screen.blit( string, (100,100) )
+    screen.blit(titleImage, titleImage_position)
+    screen.blit(title, (100,100))
     pygame.display.flip()
 
 # MAIN GAME LOOP
@@ -36,7 +35,7 @@ def main():
         if keyinput[pygame.K_ESCAPE] or pygame.event.peek(pygame.QUIT):
             break
         screen.blit(background, (0,0))
-        screen.blit(image, titleImage_position)
+        screen.blit(titleImage, titleImage_position)
         pygame.display.flip()
 
 if __name__ == '__main__': main()
