@@ -6,10 +6,9 @@ sys.path.append('tower/')
 sys.path.append('gameStats/')
 sys.path.append('map/')
 import mob_dwarf
+import mob_runner
+import tower
 import gameStats
-#FUNCTION TESTING
-
-
 
 def main():
 # SETTING UP THE GAME AREA
@@ -41,6 +40,8 @@ if __name__ == '__main__': main()
 
 
 """
+#FUNCTION TESTING
+
 stats = gameStats.GameStats()
 dwarf = mob_dwarf.Mob_Dwarf()
 
@@ -55,4 +56,4 @@ while True:
 print(stats.getCash(), stats.getMobDwarfKills())
 stats.mobKilled('Dwarf')
 print(stats.getCash(), stats.getMobDwarfKills())
-
+"""

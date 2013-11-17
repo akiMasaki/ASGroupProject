@@ -1,4 +1,8 @@
-class Mob():
+import sys
+sys.path.append('../')
+import map_object
+
+class Mob(map_object.Map_Object):
   def __init__(self):
     self.speed = 0
     self.health = 0
@@ -21,18 +25,3 @@ class Mob():
   def getDamageToBase(self):
     return self.DamageToBase
 
-"""
-#DERRIVED CLASSES
-class Mob_Dwarf(Mob):
-  def __init__(self):
-    self.speed        = 1
-    self.health       = 1
-    self.damageToBase = 1
-
-class Mob_Runner(Mob):
-  def __init__(self):
-    self.speed        = 2
-    self.health       = 1
-    self.damageToBase = 1
-  
-"""

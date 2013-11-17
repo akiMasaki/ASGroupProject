@@ -1,4 +1,8 @@
-class Tower():
+import sys
+sys.path.append('../')
+import map_object
+
+class Tower(map_object.Map_Object):
     def _init_(self):
         self.damage = 0
         self.range = 0
@@ -14,8 +18,3 @@ class Tower():
         self.range = nRange
     def getRange(self):
         return self.range
-
-class BasicTower(Tower):
-    def _init_(self):
-        self.damage = 1
-        self.range = 20
