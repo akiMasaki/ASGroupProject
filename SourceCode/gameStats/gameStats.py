@@ -9,8 +9,10 @@ class GameStats():
         self.startTime = time.time()
         self.error = ''
         self.mobDwarfKills = 0
+        self.mobRunnerKills = 0
         # killCash is a dictionary so self.killCash('Dwarf') returns 1
-        self.killCash = {'Dwarf': 1, 'Runner' : 2}
+        self.killCash = {'Dwarf': 1, 'Runner': 2}
+        self.towerCost = {'Tower1': 1, 'Tower2': 2}
         self.update()
 
     def setGameMode(self, mode):
@@ -59,9 +61,11 @@ class GameStats():
         self.currentTime=time.time() - self.startTime
     
     def mobKilled(self, mobType):
-            self.cashDrop(self.killCash[mobType])
-            if mobType == 'Dwarf':
-                self.mobDwarfKills = self.mobDwarfKills + 1
+        self.cashDrop(self.killCash[mobType])
+        if mobType == 'Dwarf':
+            self.mobDwarfKills = self.mobDwarfKills + 1
+        if mobType == 'Runner':
+            self.mobRunnerKills = self.mobRunnerKills + 1
 
     def cashDrop(self, cashToAdd):
         self.cash = self.cash + cashToAdd
@@ -70,3 +74,11 @@ class GameStats():
     and add variable to hold toatal mob kills so at end of round:
     number in the file for dwarfs = number in the file for dwarfs + mobDwarfKills
 """
+        
+    def towerBought(self, towerType):
+        self.cashSpent(self.towerCost[towerType])
+
+    def cashSpent(self, cashToDeduct):
+        self.cash = self.cash - cashToDeduct
+        
+        
