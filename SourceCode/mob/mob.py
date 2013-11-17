@@ -1,5 +1,5 @@
 class Mob():
-  def __init__():
+  def __init__(self):
     self.speed = 0
     self.health = 0
     self.damageToBase = 0
@@ -21,6 +21,7 @@ class Mob():
   def getDamageToBase(self):
     return self.DamageToBase
 
+"""
 #DERRIVED CLASSES
 class Mob_Dwarf(Mob):
   def __init__(self):
@@ -34,3 +35,4 @@ class Mob_Runner(Mob):
     self.health       = 1
     self.damageToBase = 1
   
+"""
