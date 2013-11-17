@@ -12,21 +12,16 @@ def main():
 # SETTING UP THE GAME AREA
     pygame.init()	
     screen = pygame.display.set_mode((720,670))
-    background = pygame.Surface(screen.get_size())
-    background.fill((142,206,250))
-    
-    titleImage = pygame.image.load( "images/title.jpg" )
-    titleImage_position = titleImage.get_rect()
-    titleImage_position.bottom = 240
-    titleImage_position.left = 200
-    
-    defaultFont = pygame.font.Font( None, 48 )
-    title = defaultFont.render('CLFS Tower Defence Game', 0, (0,0,0))
 
-    screen.blit(background,(0,0))
-    screen.blit(titleImage, titleImage_position)
-    screen.blit(title, (100,100))
-    pygame.display.flip()
+    background = pygame.Surface(screen.get_size())
+    background.fill((140,206,250))
+    
+    titleImage = pygame.image.load( "images/title_image.jpg" )
+    titleImage_position = titleImage.get_rect()
+
+    defaultFont = pygame.font.Font('fonts/miriamfixed.ttf', 48 )
+    title1 = defaultFont.render('CLFS', 0, (0,0,0))
+    title2 = defaultFont.render('Tower Defence', 0, (0,0,0))
 
 # MAIN GAME LOOP
     while True:
@@ -36,6 +31,8 @@ def main():
             break
         screen.blit(background, (0,0))
         screen.blit(titleImage, titleImage_position)
+        screen.blit(title1, (155,50))
+        screen.blit(title2, (50,100))
         pygame.display.flip()
 
 if __name__ == '__main__': main()
