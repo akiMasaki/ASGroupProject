@@ -13,6 +13,7 @@ class GameStats():
         # killCash is a dictionary so self.killCash('Dwarf') returns 1
         self.killCash = {'Dwarf': 1, 'Runner': 2}
         self.towerCost = {'Tower1': 1, 'Tower2': 2}
+        self.level = None
         self.update()
 
     def setGameMode(self, mode):
@@ -47,6 +48,11 @@ class GameStats():
         return self.health
     def setHealth(self, newHealth):
         self.health = newHealth
+
+    def getLevel(self):
+        return self.level
+    def setLevel(self, newLevel):
+        self.level = newLevel
 
     def getError(self):
         return self.error

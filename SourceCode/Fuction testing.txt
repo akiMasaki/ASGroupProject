@@ -1,0 +1,16 @@
+#FUNCTION TESTING
+
+stats = gameStats.GameStats()
+dwarf = mob_dwarf.Mob_Dwarf()
+
+print(dwarf.getSpeed())
+
+while True:
+    newGameMode = input('Enter Game Mode: ')
+    if stats.setGameMode(newGameMode):
+        print(stats.getError())
+    else:
+        break
+print(stats.getCash(), stats.getMobDwarfKills())
+stats.mobKilled('Dwarf')
+print(stats.getCash(), stats.getMobDwarfKills())
