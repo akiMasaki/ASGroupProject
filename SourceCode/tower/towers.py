@@ -1,15 +1,21 @@
 class Towers():
     def _init_(self):
-        self.damage = 5
-        self.range = 10
-        self.cost = 15
+        self.damage = 0
+        self.range = 0
+        self.cost = 0
         
-    def towerDamage(self):
+    def setDamage(self, nDamage):
+        self.damage = nDamage
+    def getDamage(self):
         return self.damage
 
-    def towerCost(self, newCost):
-        self.cost = newCost
+    def setRange(self, nRange):
+        self.range = nRange
+    def getRange(self):
+        return self.range
+    
+    def setCost(self, nCost):
+        self.cost = nCost
+    def getCost(self):
+        return self.cost
 
-tower = Towers()
-
-print(tower.towerDamage())
