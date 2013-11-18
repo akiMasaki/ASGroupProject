@@ -10,10 +10,19 @@ import mob_runner
 import tower
 import gameStats
 
+from pygame.locals import * # for getting mouse pos
+    
 def playTitle():
     screen.blit(titleImage, titleImage_position)
     screen.blit(title1, (155,50))
     screen.blit(title2, (50,100))
+
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            pygame.quit()
+        elif event.type == MOUSEBUTTONDOWN:
+            print(pygame.mouse.get_pos())
+        
     pygame.display.flip()
 
 def playLevel1():
@@ -30,6 +39,7 @@ gameStats.setLevel('Title')
 
 pygame.init()
 screen = pygame.display.set_mode((720,670))
+pygame.display.set_caption('CLFS Tower Defence')
 
 titleImage = pygame.image.load('images/title_image.jpg')
 titleImage_position = titleImage.get_rect()
