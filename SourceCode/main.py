@@ -23,6 +23,7 @@ def playTitle():
     #get the background image and position
     titleImage = pygame.image.load('images/title_image.jpg')
     titleImage_position = titleImage.get_rect()
+    print(titleImage.get_rect())
 
     #add the text and the images to the screen
     screen.blit(titleImage, titleImage_position)
@@ -59,10 +60,19 @@ def playMapSelect():
             pygame.quit()
         elif event.type == MOUSEBUTTONDOWN:
             mousePos = pygame.mouse.get_pos()
-    
+            mapObjects['Mobs'].append(mob_dwarf.Mob_Dwarf())
+            for o in mapObjects['Mobs']:
+                print(o.getImagePath())
+                dwarfImage = pygame.image.load(o.getImagePath())
+                screen.blit(dwarfImage, mousePos)
+            
     pygame.display.flip()
 
-#MAIN 
+#MAIN
+
+#dictionary to hold the map objects e.g. all the towers and mobs
+mapObjects = {'Mobs':[],'Towers':[]}
+    
 # dictionary to hold the fuction for different levels
 levelSelect = {'Title':playTitle, 'MapSelect':playMapSelect}
 
