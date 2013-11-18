@@ -10,7 +10,7 @@ class GameStats():
         self.error = ''
         # killCash is a dictionary so self.killCash('Dwarf') returns 1
         self.killCash = {'Dwarf': 1, 'Runner': 2}
-        self.towerCost = {'Tower1': 1, 'Tower2': 2}
+        self.towerCost = {'Tower1': 100, 'Tower2': 200}
         self.mobKills  = {'Dwarf':0,'Runner':0}
         self.level = None
         self.update()
@@ -78,10 +78,17 @@ class GameStats():
     def cashSpent(self, cashToDeduct):
         self.cash = self.cash - cashToDeduct
         
-
 """
+gameStats = GameStats()
+gameStats.setLevel('Title')
+print(gameStats.getMobKills())
+print(gameStats.getCash())
+gameStats.mobKilled('Dwarf')
+print(gameStats.getMobKills())
+print(gameStats.getCash())
+
+
     fuction to output mob kills into a file to read in next round
     and add variable to hold toatal mob kills so at end of round:
     number in the file for dwarfs = number in the file for dwarfs + mobDwarfKills
-"""
-         
+"""        
