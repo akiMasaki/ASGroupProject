@@ -59,18 +59,15 @@ class GameStats():
     def getTime(self):
         return self.currentTime
     
-    def getMobDwarfKills(self):
-        return self.mobDwarfKills
+    def getMobKills(self):
+        return self.mobKills
     
     def update(self):
         self.currentTime=time.time() - self.startTime
     
     def mobKilled(self, mobType):
         self.cashDrop(self.killCash[mobType])
-        if mobType == 'Dwarf':
-            self.mobDwarfKills = self.mobDwarfKills + 1
-        if mobType == 'Runner':
-            self.mobRunnerKills = self.mobRunnerKills + 1
+        self.mobKills[mobType] = self.mobKills[mobType] + 1
 
     def cashDrop(self, cashToAdd):
         self.cash = self.cash + cashToAdd
