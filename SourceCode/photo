@@ -1,0 +1,18 @@
+import random
+import time
+str1 ="""P3
+1024 1024
+255
+"""
+startTime=time.time()
+
+fo = open('ppmImage.ppm','w+')
+fo.write(str1)
+for i in range(0,1024):
+    for b in range(0,1024):
+        for c in range(0,3):
+            fo.write(str(random.randint(0,255))+ ' ')
+    fo.write('\n')     
+fo.close()
+endTime=time.time()
+print('OMG FINALY FINISHED!! AFTER: '+ endTime-startTime + 's')
