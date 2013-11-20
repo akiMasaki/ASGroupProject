@@ -96,6 +96,7 @@ while gameStats.getLevel()!=None:
         break
     #use the level select top call the right fuction to display correct level
     levelSelect[gameStats.getLevel()]()
+    gameStats.update()
 
 
 
